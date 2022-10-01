@@ -153,13 +153,13 @@ body{
 .tela_preload{
     width: 100vw;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.875);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: contain;
     z-index: 130;
     position: fixed;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(10px);
-}
+}.tela_preload img{width: 90px;}
