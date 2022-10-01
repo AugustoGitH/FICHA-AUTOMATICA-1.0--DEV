@@ -187,7 +187,7 @@ function disabledInputs_Edit(input, icon, ficha,index, inText){
     })
 }
 function resetEstadoButtonInputs(input, inText){
-    document.querySelectorAll(inText).forEach(input =>{
+    document.querySelectorAll(`.ficha_container ${inText}`).forEach(input =>{
         input.parentNode.querySelector("i").classList.remove("bx-x")
         input.parentNode.querySelector("i").classList.add("bxs-pencil")
         input.disabled = true
