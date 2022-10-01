@@ -421,3 +421,55 @@ header h1{
     display: flex;
     justify-content: space-evenly;
 }
+
+.inputSearch_container{
+    background-color: yellow;
+    box-shadow: 3px 3px rgb(117, 191, 19);
+    padding: 7px;
+    max-width: 400px;
+    height: 50px;
+    text-align: end;
+    position: fixed;
+    top: 180px;
+    left: -2px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.2s;
+    z-index: 100;
+}.inputSearch_container i{
+    cursor: pointer;
+}
+.inputSearch_container label{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 7px;
+    transition: 0.2s;
+} .input_search{
+    width: 0;
+    opacity: 0;
+    height: 100%;
+    border: none;
+    transition: 0.2s;
+    font-size: 1.1rem;
+    background-color: yellow;
+    
+}
+.inputSearch_container:hover .input_search, .input_search:focus{
+    width: 200px;
+    opacity: 1;
+    margin-left: 1rem;
+}.input_search:focus .input_search::placeholder{
+    color: black;
+}
+.input_search:focus{
+    outline: none;
+}
+
+
+.label_select{
+    background-color: red;
+    color: black;
+}
