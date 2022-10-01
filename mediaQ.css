@@ -1,0 +1,57 @@
+
+
+
+/* TABLET */
+@media (max-width: 768px){
+    .header_content i{font-size: 1.9rem;}
+    .header_content a{
+        font-size: 1rem;
+        padding: 6px
+    }
+    .home_content h1{
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+    .home_content button, .home_content a{
+        font-size: 1.2rem;
+    }
+}
+
+/* PHONE */
+@media (max-width: 600px) {
+    header{
+        position: fixed;
+    }
+    .alert_testSite p{
+        font-size: 1rem;
+    }
+    .home{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } .header_content i{font-size: 1.9rem;}
+    .header_content a{
+        font-size: 0.9rem;
+        padding: 4px;
+    }.header_content span{
+        font-size: 0.9rem;
+    }
+    .home_content h1{font-size: 2rem;}
+    .home_content button, .home_content a{
+        font-size: 0.9rem;
+    }.home_content a{
+        box-shadow: 3px 3px rgb(127, 127, 241);
+    }
+}
+
+/* LAPTOP */
+@media screen and (max-width: 768px) and (max-width: 992px){
+    /* SEM ALTERAÇÃO */
+}
+
+/* DESKTOP */
+@media screen and (max-width: 1200px){
+    /* SEM ALTERAÇÃO */
+}

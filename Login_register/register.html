@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/Assets/caravela.png">
+    <title>Se registre!</title>
+    <link href="/Login_register/login_r.css" rel="stylesheet">
+    <link href="/login_register/mediaQLogin_regi.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="tela">
+        <div class="tela_content">
+            <span class="spanTitle">
+                <h1>Register</h1>
+                <i class='bx bx-street-view'></i>
+            </span>
+            <form>
+                <p>Nome:</p>
+                <span>
+                    <img src="/Assets/helmet.png">
+                    <input id="input_nome" type="text" required name="nome" placeholder="Digite seu nome ou apelido">
+                </span>
+                <p>Email:</p>
+                <span>
+                    <img src="/Assets/cavaleiro.png">
+                    <input id="input_email_register" type="email" required name="email" placeholder="Digite seu email">
+                </span>
+                <p>Senha:</p>
+                <span>
+                    <img src="/Assets/escudo.png">
+                    <input id="input_pass_register " type="password" required name="pass" placeholder="Digite sua senha" onfocus="focusInputPass(this)">
+                    <i onclick="pass_visible(this)"class='bx bxs-low-vision vision_pass'></i>
+                </span>
+                <input id="submit_form_register" class="submit_form" type="submit" value="Registrar">
+            </form>
+            <a href="/Login_register/Login.html" class="register_form">Já está registrado? Faça seu login</a>
+        </div>
+    </section>
+
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script defer src="/fire_baseScript.js"></script>
+    <script defer src="/Login_register/firebase_register.js"></script>
+    <script src="/Login_register/index_formL.js"></script>
+
+</body>
+</html>

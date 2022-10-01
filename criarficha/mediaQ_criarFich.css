@@ -1,0 +1,77 @@
+@media (max-width: 791px){
+    .content_criateFicha{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .Continput_imgPerfil{
+        order: 1;
+        margin-bottom: 2.4rem;
+    }
+    .inputs_criateName{
+        order: 2;
+    }
+}
+
+/* PHONE */
+@media (max-width: 600px) {
+    .alert h1{
+        font-size: 1.5rem;
+    }.alert a{
+        font-size: 1.2rem;
+    }.alert img{
+        width: 300px;
+    }
+    .inputs_criateName{
+        width: 100%;
+    }.inputs_criateName label{
+        width: 100%;
+    }
+    .head_ficha h2{
+        font-size: 1.4rem;
+    }.label_textarea{
+        flex-direction: column;
+        
+    }.label_textarea textarea{
+        width: 100%;
+        margin-left: 0;
+    }.label_textarea span{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+@media (max-width: 400px){
+    .alert h1{
+        font-size: 1.3rem;
+    }
+    .alert a{
+        font-size: 1.1rem;
+    }header h1{
+        font-size: 1.1rem;
+    }header img{
+        display: none;
+    }header{
+        padding: 5px;
+    }
+    body{
+        padding: 1rem;
+    }
+    .ficha_container label input{
+        font-size: 1rem;
+    }
+    .inputs_criateName label input{
+        font-size: 1rem;
+    }
+    .Continput_imgPerfil label{
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+/* LAPTOP */
+@media screen and (max-width: 768px) and (max-width: 992px){
+    /* SEM ALTERAÇÃO */
+}
+
+/* DESKTOP */
+@media screen and (max-width: 1200px){
+    /* SEM ALTERAÇÃO */
+}

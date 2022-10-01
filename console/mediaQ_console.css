@@ -1,0 +1,78 @@
+/* TABLET */
+@media (max-width: 768px){
+    .image_user{
+        width: 35px;
+        height: 35px;
+    }
+    header h1{
+        font-size: 1.3rem;
+    }header h1 i {
+        font-size: 25px;
+        
+    }header{
+        position: fixed;
+        top: 0;
+    }
+    .fichas_existence ul{
+        width: 100%;
+    }
+    .fichas_existence li{
+        font-size: 0.8rem;
+    }.container_console{
+        padding: 1rem 2rem;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+    }
+    .button_acessar{
+        font-size: 0.7rem;
+    }
+    .fichas_create a{
+        font-size: 0.8rem;
+    }.fichas_create h3, .fichas_existence h3{
+        font-size: 1.2rem;
+    }
+}
+
+/* PHONE */
+@media (max-width: 600px) {
+    .input_alterarnome{
+        width: 100%;
+    }
+    .name_user{
+        font-size: 0.6rem;
+    }
+    header h1{
+        font-size: 1.2rem;
+    }
+    .saudacao_user{
+        font-size: 1.8rem;
+    }.container_console section{
+        margin-top: 0.8rem;
+    }.fichas_create{
+        margin-bottom: 5rem;
+    }
+}
+@media (max-width: 400px){
+    .fichas_existence ul li span{
+        display: none;
+    }
+    header{
+        flex-wrap: wrap;
+    }
+    header nav{
+        margin-top: 1rem; 
+    }
+     .button_acessar{
+        opacity: 1;
+     }
+}
+/* LAPTOP */
+@media screen and (max-width: 768px) and (max-width: 992px){
+    /* SEM ALTERAÇÃO */
+}
+
+/* DESKTOP */
+@media screen and (max-width: 1200px){
+    /* SEM ALTERAÇÃO */
+}
