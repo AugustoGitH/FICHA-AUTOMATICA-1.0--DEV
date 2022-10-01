@@ -161,4 +161,5 @@ body{
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(10px);
 }

@@ -26,39 +26,44 @@ function criar_poopLogout(msg, fun){
 }
 
 function openlist_perfil(){
-    if(!document.querySelector(".list_menuPerfil")){
-        const container = document.querySelector(".user_perfil_cont")
+    const container = document.querySelector(".user_perfil_cont")
 
-        let list_menuPerfil = document.createElement("ul")
-        list_menuPerfil.classList.add("list_menuPerfil")
+    let list_menuPerfil = document.createElement("ul")
+    list_menuPerfil.classList.add("list_menuPerfil")
+
+    let LI_alterar_nomePerfil = document.createElement("li")
+    LI_alterar_nomePerfil.addEventListener("click", ()=>{
+        container.removeChild(list_menuPerfil)
+        mostrarInput_alterarNome()
+    })
+    LI_alterar_nomePerfil.innerText = "ALTERAR NOME DE PERFIL"
+
+    let LI_alterar_fotoPerfil = document.createElement("li")
+    LI_alterar_fotoPerfil.addEventListener("click", ()=>{
+        container.removeChild(list_menuPerfil)
+        mostrar_optionsFotosPerfil()
+    })
+    LI_alterar_fotoPerfil.innerText = "ALTERAR FOTO DE PERFIL"
+
+    let LI_logout = document.createElement("li")
+    LI_logout.addEventListener("click", ()=>{
+        container.removeChild(list_menuPerfil)
+        criar_poopLogout("Você deseja sair da sua conta?", logout)
+    })
+    LI_logout.innerText = "SAIR DA CONTA"
+
+    if(!document.querySelector(".list_menuPerfil")){
         container.appendChild(list_menuPerfil)
-    
-        let LI_alterar_nomePerfil = document.createElement("li")
-        LI_alterar_nomePerfil.addEventListener("click", ()=>{
-            container.removeChild(list_menuPerfil)
-            mostrarInput_alterarNome()
-        })
-        LI_alterar_nomePerfil.innerHTML = "ALTERAR NOME DE PERFIL"
         list_menuPerfil.appendChild(LI_alterar_nomePerfil)
-    
-        let LI_alterar_fotoPerfil = document.createElement("li")
-        LI_alterar_fotoPerfil.addEventListener("click", ()=>{
-            container.removeChild(list_menuPerfil)
-            mostrar_optionsFotosPerfil()
-        })
-        LI_alterar_fotoPerfil.innerHTML = "ALTERAR FOTO DE PERFIL"
         list_menuPerfil.appendChild(LI_alterar_fotoPerfil)
-    
-        let LI_logout = document.createElement("li")
-        LI_logout.addEventListener("click", ()=>{
-            container.removeChild(list_menuPerfil)
-            criar_poopLogout("Você deseja sair da sua conta?", logout)
-        })
-        LI_logout.innerHTML = "SAIR DA CONTA"
         list_menuPerfil.appendChild(LI_logout)
+
+    }else if(document.querySelector(".options_FotosPerfil")){
+        
+        document.querySelector(".options_FotosPerfil").remove()
+
     }else{
         document.querySelector(".list_menuPerfil").remove()
-        document.querySelector(".options_FotosPerfil").remove()
     }
     
 }

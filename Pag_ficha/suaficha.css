@@ -268,6 +268,7 @@ header h1{
     z-index: 40;
     background-color: rgba(255, 255, 255, 0.811);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
 }
 .poop_logout_content{
     max-width: 400px;
