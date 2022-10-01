@@ -1,11 +1,4 @@
 
-
-
-/* TABLET */
-@media (max-width: 768px){
-
-}
-
 /* PHONE */
 @media (max-width: 500px) {
     .tela{
@@ -14,9 +7,7 @@
         width: 100vw;
         height: 100vh;
     }
-    .tela form span{
-        width: 100%;
-    }
+    .tela form span{width: 100%;}
     .register_form{
         margin-right: 1rem;
         font-size: 0.9rem;
@@ -24,12 +15,3 @@
     
 }
 
-/* LAPTOP */
-@media screen and (max-width: 768px) and (max-width: 992px){
-    /* SEM ALTERAÇÃO */
-}
-
-/* DESKTOP */
-@media screen and (max-width: 1200px){
-    /* SEM ALTERAÇÃO */
-}

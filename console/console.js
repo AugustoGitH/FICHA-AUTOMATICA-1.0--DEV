@@ -1,22 +1,15 @@
-
 function verifyUserDados_Window(){
     auth.onAuthStateChanged(user => {
-        if(user){
-            addDados_User_Page(user.uid)
-        }else{
-            console.log("User não logado!")
-        }
+        user ? addDados_User_Page(user.uid) : console.log("User não logado!")
     })
 }
 function addDados_User_Page(user){
     let docRef = db.collection("Players").doc(user)
     docRef.get().then((doc)=>{
-        console_tela_pronto()
+        setTimeout(() => {document.querySelector(".tela_preload").remove()}, 1000);
         User_name_appendConsol(doc.data().user_infos)
     })
 }
-
-
 
 function User_name_appendConsol(user){
     const user_input = document.querySelector(".saudacao_user")
@@ -27,16 +20,10 @@ function User_name_appendConsol(user){
     img_user.innerHTML = `<img src="${user.img_perfil}">`
     
 }
-function console_tela_pronto(){
-    setTimeout(()=>{
-        document.querySelector("#carregando_white").remove()
-    }, 1000)
-}
 
 function alterar_nomeConsole(input, label, container){
-    if(!input.value){
-        alert("Campo vazio")
-    }else{
+    if(!input.value){alert("Campo vazio")}
+    else{
         label.style.visibility = "hidden"
         let user = auth.currentUser.uid
         db.collection("Players").doc(user).set({
@@ -51,13 +38,11 @@ function alterar_nomeConsole(input, label, container){
         })
     }
 }
+
 //LOGOUT
 function logout(){
-    auth.signOut().then(()=>{
-        window.location.href = "/index.html";
-    }).catch(err=>{
-        console.log(err)
-    })
+    auth.signOut().then(()=>{window.location.href = "/index.html";})
+    .catch(err=>{console.log(err)})
 }
 
 function map_fichasDb(){
@@ -69,15 +54,26 @@ function map_fichasDb(){
                 let fichasArray = doc.data().Fichas
                 fichasArray.forEach(ficha => {
                     mostrar_fichasPlayer(ficha)
-                })
-            }).catch(err =>{
-                console.log("Erro ao carregar fichas no console" + err)
-            })
-        }else{
-            console.log("opa, erro")
+                })}).catch(err =>{console.log("Erro ao carregar fichas no console" + err)})
         }
+        else{console.log("opa, erro")}
     })
+}
 
+function mostrar_optionsFotosPerfil(){
+    let docRef = db.collection("Assets images").doc("Al4r5yFS5Y4Mutmopg7W")
+    docRef.get().then((doc)=>{
+        let imgs = doc.data().Options_imagesPerfil
+        criarMap_optionsPerfil(imgs)
+    })
+}
+
+function salvarImg_PerfilDb(el){
+    let user = auth.currentUser.uid
+    db.collection("Players").doc(user).set({
+        user_infos: {img_perfil: el.src}
+    }, {merge: true }).then(()=>{window.location.reload()})
+    .catch(err =>{console.log("Erro ao adicionar imagem de perfil! " + err)})
 }
 
 document.addEventListener("DOMContentLoaded", ()=>{

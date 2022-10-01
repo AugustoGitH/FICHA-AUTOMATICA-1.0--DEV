@@ -1,3 +1,4 @@
+
 const focus_eye = document.querySelectorAll(".focus_eye")
 const vision_pass = document.querySelectorAll(".vision_pass")
 
@@ -14,7 +15,14 @@ function pass_visible(el){
         input.type = "text"
         el.style.color = "red"
     }
-}
+} 
+
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    setTimeout(() => {document.querySelector(".tela_preload").remove()}, 1000);
+})
+
+
 
 
 

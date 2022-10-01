@@ -74,9 +74,12 @@
         width: 100%;
     }
     .inputs_infos input{
-        max-width: 300px;
+        max-width: 50%;
 
-    }.button_edit-Input{
+    }.ul_inputs input{
+        max-width: 30%;
+    }
+    .button_edit-Input{
         right: 0;
     }
  

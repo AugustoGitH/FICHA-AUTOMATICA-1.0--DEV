@@ -1,5 +1,3 @@
-
-
 function criar_poopLogout(msg, fun){
     let poop_logout = document.createElement("div")
     poop_logout.classList.add("poop_logout")
@@ -16,8 +14,6 @@ function criar_poopLogout(msg, fun){
     let span = document.createElement("span")
     poop_logout_content.appendChild(span)
 
-    
-
     let button_logout = document.createElement("button")
     span.appendChild(button_logout)
     button_logout.innerHTML = "SIM"
@@ -26,9 +22,7 @@ function criar_poopLogout(msg, fun){
     let button_poopNone = document.createElement("button")
     span.appendChild(button_poopNone)
     button_poopNone.innerHTML = "NÃO"
-    button_poopNone.onclick = ()=>{
-        document.body.removeChild(poop_logout)
-    }
+    button_poopNone.onclick = ()=>{document.body.removeChild(poop_logout)}
 }
 
 function openlist_perfil(){
@@ -68,14 +62,8 @@ function openlist_perfil(){
     }
     
 }
-function mostrar_optionsFotosPerfil(){
-    let docRef = db.collection("Assets images").doc("Al4r5yFS5Y4Mutmopg7W")
-    docRef.get().then((doc)=>{
-        let imgs = doc.data().Options_imagesPerfil
-        criarMap_optionsPerfil(imgs)
-    })
-       
-}
+
+
 function criarMap_optionsPerfil(collection){
     const container = document.querySelector(".user_perfil_cont")
 
@@ -85,20 +73,11 @@ function criarMap_optionsPerfil(collection){
 
     collection.forEach(img => {
         options_FotosPerfil.innerHTML += `<img onclick="salvarImg_PerfilDb(this)" src="${img.url}">`
-    });
-}
-function salvarImg_PerfilDb(el){
-    let user = auth.currentUser.uid
-    db.collection("Players").doc(user).set({
-        user_infos: {
-            img_perfil: el.src
-        }
-    }, {merge: true }).then(()=>{
-        window.location.reload()
-    }).catch(err =>{
-        console.log("Erro ao adicionar imagem de perfil! " + err)
     })
 }
+
+
+
 function mostrarInput_alterarNome(){
     let container = document.createElement("div")
     container.classList.add("Page_contInput_alterarnome")
@@ -122,16 +101,12 @@ function mostrarInput_alterarNome(){
 
     let button_alterar = document.createElement("button")
     button_alterar.innerHTML = "Alterar"
-    button_alterar.addEventListener("click", ()=>{
-        alterar_nomeConsole(input, label, container)
-    })
+    button_alterar.addEventListener("click", ()=>{alterar_nomeConsole(input, label, container)})
     label.appendChild(button_alterar)
 
     let button_cancel = document.createElement("button")
     button_cancel.innerHTML = "Cancelar"
-    button_cancel.addEventListener("click", ()=>{
-        document.body.removeChild(container)
-    })
+    button_cancel.addEventListener("click", ()=>{document.body.removeChild(container)})
     label.appendChild(button_cancel)
 
 
@@ -142,9 +117,6 @@ function  mostrar_fichasPlayer(ficha){
 
     let FichaLi = document.createElement("li")
     container.appendChild(FichaLi)
-
-
-
 
     let img_perfil = document.createElement("div")
     img_perfil.classList.add("img_perfil")

@@ -1,7 +1,3 @@
-
-// const db = firebase.firestore()
-// const auth = firebase.auth()
-
 //REGISTER
 const submit_form_register = document.querySelector("#submit_form_register")
 submit_form_register.addEventListener("click", registrar)
@@ -49,9 +45,8 @@ function getErrorMessageRegister(error){
         return "A senha deve ter pelo menos 6 caracteres"
     }if(error.code === 'auth/invalid-email'){
         return "Você digitou seu email incorretamente, verifique e tente novamente"
-    }else{
-        return error
     }
+    else{return error}
 }
 
 function  criar_userDb(nome_user, email_user){
@@ -87,6 +82,7 @@ function Open_carregando(){
     p.innerText = "Registrando..."
     container_carregar.appendChild(p)
 }
+
 function Open_carregando_att(){
     const p_carregando = document.querySelector(".p_carregando")
     setTimeout(()=>{

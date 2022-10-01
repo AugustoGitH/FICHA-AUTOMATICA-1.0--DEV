@@ -1,9 +1,4 @@
-
-
-document.addEventListener("DOMContentLoaded", ()=>{
-    setTimeout(() => {
-        document.querySelector(".carregandoHome").remove()
-    }, 1000);
+function verifyUserConnect(){
     const buttons_acess = document.querySelector(".buttons_acess")
     const button_boasVindas = document.querySelector(".button_boasvindas")
     auth.onAuthStateChanged(user =>{
@@ -19,7 +14,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
            
         }
     })
-})
+}
+
+
 function  avisoTest(){
     let container = document.createElement("div")
     container.classList.add("alert_testSite")
@@ -40,3 +37,8 @@ function  avisoTest(){
     })
     container.appendChild(button_ir)
 }
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    setTimeout(() => {document.querySelector(".tela_preload").remove()}, 1000);
+    verifyUserConnect()
+})

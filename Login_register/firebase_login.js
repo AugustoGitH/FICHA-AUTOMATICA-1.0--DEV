@@ -1,7 +1,3 @@
-
-// const db = firebase.firestore()
-// const auth = firebase.auth()
-
 //lOGIN
 const submit_form_login = document.querySelector("#submit_form_login")
 const input_pass_login = document.querySelector("#input_pass_login")
