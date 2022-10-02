@@ -39,6 +39,6 @@ function  avisoTest(){
 }
 
 document.addEventListener("DOMContentLoaded", ()=>{
-    setTimeout(() => {document.querySelector(".tela_preload").remove()}, 1000);
+    setTimeout(() => {document.querySelector(".tela_preload").remove()}, 3000);
     verifyUserConnect()
 })
