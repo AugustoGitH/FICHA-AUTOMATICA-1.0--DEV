@@ -6,6 +6,9 @@
     list-style: none;
     text-decoration: none;
 }
+body{
+    background-color: white;
+}
 header{
     padding: 1rem 2rem;
     width: 100%;

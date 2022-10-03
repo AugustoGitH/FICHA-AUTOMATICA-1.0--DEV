@@ -53,10 +53,12 @@ header{
     align-items: center;
     flex-direction: column;
     padding: 1rem;
+    color: white;
 }
 .home_content h1{
     text-align: center;
     text-transform: uppercase;
+    color: black;
     font-size: 3rem;
     max-width: 90%;
     font-weight: bold;
