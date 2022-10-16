@@ -19,5 +19,6 @@
         "Presdigitação",
         "Religiao",
         "Sobrevivencia"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
